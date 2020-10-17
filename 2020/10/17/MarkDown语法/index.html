@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-my.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-my.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-my.ico">
+  <link rel="mask-icon" href="/images/logo-my.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"chenk.me","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+
+  <meta name="description" content="MarkDown语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MarkDown语法">
+<meta property="og:url" content="http://chenk.me/2020/10/17/MarkDown%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="BigChen">
+<meta property="og:description" content="MarkDown语法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.mdeditor.com/images/logos/markdown.png">
+<meta property="article:published_time" content="2020-10-17T09:24:06.000Z">
+<meta property="article:modified_time" content="2020-10-17T15:07:48.789Z">
+<meta property="article:author" content="陈坤">
+<meta property="article:tag" content="语法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.mdeditor.com/images/logos/markdown.png">
+
+
+<link rel="canonical" href="http://chenk.me/2020/10/17/MarkDown%E8%AF%AD%E6%B3%95/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>MarkDown语法 | BigChen</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">BigChen</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkDown%E8%AF%AD%E6%B3%95"><span class="nav-text">MarkDown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E4%BD%BF%E7%94%A8"><span class="nav-text">标题使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89"><span class="nav-text">字符效果和横线等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8-Blockquotes"><span class="nav-text">引用 Blockquotes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-Links"><span class="nav-text">锚点与链接 Links</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC"><span class="nav-text">缩进风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%A3%E7%A0%81"><span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML-%E4%BB%A3%E7%A0%81-HTML-codes"><span class="nav-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87-Images"><span class="nav-text">图片 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8-Lists"><span class="nav-text">列表 Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%87%8F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E6%98%9F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-Ordered-Lists"><span class="nav-text">有序列表 Ordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-list"><span class="nav-text">GFM task list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-Tables"><span class="nav-text">绘制表格 Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-HTML-Entities-Codes"><span class="nav-text">特殊符号 HTML Entities Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Emoji%E8%A1%A8%E6%83%85-smiley"><span class="nav-text">Emoji表情 :smiley:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><span class="nav-text">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-Escape"><span class="nav-text">反斜杠 Escape</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-TeX-KaTeX"><span class="nav-text">科学公式 TeX(KaTeX)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E7%AC%A6-Page-break"><span class="nav-text">分页符 Page break</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE-Flowchart"><span class="nav-text">绘制流程图 Flowchart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE-Sequence-Diagram"><span class="nav-text">绘制序列图 Sequence Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#End"><span class="nav-text">End</span></a></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="陈坤"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">陈坤</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ck123-rgb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ck123-rgb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/chen_wu_ming" title="gitee → https:&#x2F;&#x2F;gitee.com&#x2F;chen_wu_ming" rel="noopener" target="_blank"><i class="fab fa-git fa-fw"></i>gitee</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.iaia.cc/" title="https:&#x2F;&#x2F;www.iaia.cc" rel="noopener" target="_blank">DIYsay</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.qinxuege.com/" title="https:&#x2F;&#x2F;www.qinxuege.com" rel="noopener" target="_blank">zhangs</a>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chenk.me/2020/10/17/MarkDown%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="陈坤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BigChen">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MarkDown语法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-10-17 17:24:06 / 修改时间：23:07:48" itemprop="dateCreated datePublished" datetime="2020-10-17T17:24:06+08:00">2020-10-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">使用</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="MarkDown语法"><a href="#MarkDown语法" class="headerlink" title="MarkDown语法"></a>MarkDown语法</h1><a id="more"></a>
+
+<h3 id="标题使用"><a href="#标题使用" class="headerlink" title="标题使用"></a>标题使用</h3><p>【#】后面记得空格</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 标题H1</span><br><span class="line"></span><br><span class="line">## 标题H2</span><br><span class="line"></span><br><span class="line">### 标题H3</span><br><span class="line"></span><br><span class="line">#### 标题H4</span><br><span class="line"></span><br><span class="line">##### 标题H5</span><br><span class="line"></span><br><span class="line">###### 标题H5</span><br></pre></td></tr></table></figure>
+<h3 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---   一条虚线</span><br><span class="line"></span><br><span class="line">~~删除线~~ <span class="tag">&lt;<span class="name">s</span>&gt;</span>删除线（开启识别HTML标签时）<span class="tag">&lt;/<span class="name">s</span>&gt;</span></span><br><span class="line"></span><br><span class="line">*斜体字* _斜体字_</span><br><span class="line"></span><br><span class="line">**粗体**  __粗体__</span><br><span class="line"></span><br><span class="line">***粗斜体*** ___粗斜体___</span><br><span class="line"></span><br><span class="line">上标：X<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>，下标：O<span class="tag">&lt;<span class="name">sup</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"></span><br><span class="line">**缩写(同HTML的abbr标签)**</span><br><span class="line">&gt; 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</span><br><span class="line"></span><br><span class="line">The <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">&quot;Hyper Text Markup Language&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> specification is maintained by the <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">&quot;World Wide Web Consortium&quot;</span>&gt;</span>W3C<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span>.</span><br></pre></td></tr></table></figure>
+
+<h3 id="引用-Blockquotes"><a href="#引用-Blockquotes" class="headerlink" title="引用 Blockquotes"></a>引用 Blockquotes</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; 引用文本 Blockquotes</span><br><span class="line"></span><br><span class="line">引用的行内混合 Blockquotes</span><br><span class="line"></span><br><span class="line">&gt; 引用：如果想要插入空白换行`即<span class="tag">&lt;<span class="name">br</span> /&gt;</span>标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](https://www.mdeditor.com/)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[普通链接](https://www.mdeditor.com/)</span><br><span class="line">[普通链接带标题](https://www.mdeditor.com/ &quot;普通链接带标题&quot;)</span><br><span class="line">直接链接：<span class="tag">&lt;<span class="name">https:</span>//<span class="attr">www.mdeditor.com</span>&gt;</span></span><br><span class="line">[锚点链接][anchor-id]</span><br><span class="line">[anchor-id]: https://www.mdeditor.com/</span><br><span class="line">[mailto:test.test@gmail.com](mailto:test.test@gmail.com)</span><br><span class="line">GFM a-tail link @pandao</span><br><span class="line">邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com</span><br><span class="line">&gt; @pandao</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### 多语言代码高亮 Codes</span><br><span class="line"></span><br><span class="line">#### 行内代码 Inline code</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">执行命令：`npm install marked`</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">即缩进四个空格，也做为实现类似 `<span class="tag">&lt;<span class="name">pre</span>&gt;</span>` 预格式化文本 ( Preformatted Text ) 的功能。</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">?php</span></span></span><br><span class="line"><span class="tag">        <span class="attr">echo</span> &quot;<span class="attr">Hello</span> <span class="attr">world</span>!&quot;;</span></span><br><span class="line"><span class="tag">    ?&gt;</span></span><br><span class="line">预格式化文本：</span><br><span class="line"></span><br><span class="line">    | First Header  | Second Header |</span><br><span class="line">    | ------------- | ------------- |</span><br><span class="line">    | Content Cell  | Content Cell  |</span><br><span class="line">    | Content Cell  | Content Cell  |</span><br></pre></td></tr></table></figure>
+
+<h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&quot;Hello world!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charest</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Editor.md, Markdown, Editor&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">body</span>&#123;<span class="attribute">font-size</span>:<span class="number">14px</span>;<span class="attribute">color</span>:<span class="number">#444</span>;<span class="attribute">font-family</span>: <span class="string">&quot;Microsoft Yahei&quot;</span>, Tahoma, <span class="string">&quot;Hiragino Sans GB&quot;</span>, Arial;<span class="attribute">background</span>:<span class="number">#fff</span>;&#125;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">ul</span>&#123;<span class="attribute">list-style</span>: none;&#125;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">img</span>&#123;<span class="attribute">border</span>:none;<span class="attribute">vertical-align</span>: middle;&#125;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;text-xxl&quot;</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;text-green&quot;</span>&gt;</span>Plain text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h3><p>图片加链接 (Image + Link)：</p>
+<p><a target="_blank" rel="noopener" href="https://www.mdeditor.com/images/logos/markdown.png" title="markdown"><img src="https://www.mdeditor.com/images/logos/markdown.png"></a></p>
+<blockquote>
+<p>Follow your heart.</p>
+</blockquote>
+<hr>
+<h3 id="列表-Lists"><a href="#列表-Lists" class="headerlink" title="列表 Lists"></a>列表 Lists</h3><h4 id="无序列表（减号）Unordered-Lists"><a href="#无序列表（减号）Unordered-Lists" class="headerlink" title="无序列表（减号）Unordered Lists (-)"></a>无序列表（减号）Unordered Lists (-)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 列表一</span><br><span class="line">- 列表二</span><br><span class="line">- 列表三</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="无序列表（星号）Unordered-Lists"><a href="#无序列表（星号）Unordered-Lists" class="headerlink" title="无序列表（星号）Unordered Lists (*)"></a>无序列表（星号）Unordered Lists (*)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 列表一</span><br><span class="line">* 列表二</span><br><span class="line">* 列表三</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="无序列表（加号和嵌套）Unordered-Lists"><a href="#无序列表（加号和嵌套）Unordered-Lists" class="headerlink" title="无序列表（加号和嵌套）Unordered Lists (+)"></a>无序列表（加号和嵌套）Unordered Lists (+)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+ 列表一</span><br><span class="line">+ 列表二</span><br><span class="line">    + 列表二-1</span><br><span class="line">    + 列表二-2</span><br><span class="line">    + 列表二-3</span><br><span class="line">+ 列表三</span><br><span class="line">    * 列表一</span><br><span class="line">    * 列表二</span><br><span class="line">    * 列表三</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="有序列表-Ordered-Lists"><a href="#有序列表-Ordered-Lists" class="headerlink" title="有序列表 Ordered Lists (-)"></a>有序列表 Ordered Lists (-)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. 第一行</span><br><span class="line">2. 第二行</span><br><span class="line">3. 第三行</span><br></pre></td></tr></table></figure>
+
+<h4 id="GFM-task-list"><a href="#GFM-task-list" class="headerlink" title="GFM task list"></a>GFM task list</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- [x] GFM task list 1</span><br><span class="line">- [x] GFM task list 2</span><br><span class="line">- [ ] GFM task list 3</span><br><span class="line">    - [ ] GFM task list 3-1</span><br><span class="line">    - [ ] GFM task list 3-2</span><br><span class="line">    - [ ] GFM task list 3-3</span><br><span class="line">- [ ] GFM task list 4</span><br><span class="line">    - [ ] GFM task list 4-1</span><br><span class="line">    - [ ] GFM task list 4-2</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="绘制表格-Tables"><a href="#绘制表格-Tables" class="headerlink" title="绘制表格 Tables"></a>绘制表格 Tables</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">| 项目        | 价格   |  数量  |</span><br><span class="line">| --------   | -----:  | :----:  |</span><br><span class="line">| 计算机      | $1600   |   5     |</span><br><span class="line">| 手机        |   $12   |   12   |</span><br><span class="line">| 管线        |    $1    |  234  |</span><br><span class="line"></span><br><span class="line">First Header  | Second Header</span><br><span class="line">------------- | -------------</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line"></span><br><span class="line">| First Header  | Second Header |</span><br><span class="line">| ------------- | ------------- |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br><span class="line"></span><br><span class="line">| Function name | Description                    |</span><br><span class="line">| ------------- | ------------------------------ |</span><br><span class="line">| `help()`      | Display the help window.       |</span><br><span class="line">| `destroy()`   | **Destroy your computer!**     |</span><br><span class="line"></span><br><span class="line">| Left-Aligned  | Center Aligned  | Right Aligned |</span><br><span class="line">| :------------ |:---------------:| -----:|</span><br><span class="line">| col 3 is      | some wordy text | $1600 |</span><br><span class="line">| col 2 is      | centered        |   $12 |</span><br><span class="line">| zebra stripes | are neat        |    $1 |</span><br><span class="line"></span><br><span class="line">| Item      | Value |</span><br><span class="line">| --------- | -----:|</span><br><span class="line">| Computer  | $1600 |</span><br><span class="line">| Phone     |   $12 |</span><br><span class="line">| Pipe      |    $1 |</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="特殊符号-HTML-Entities-Codes"><a href="#特殊符号-HTML-Entities-Codes" class="headerlink" title="特殊符号 HTML Entities Codes"></a>特殊符号 HTML Entities Codes</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;copy;</span> &amp;  <span class="symbol">&amp;uml;</span> <span class="symbol">&amp;trade;</span> <span class="symbol">&amp;iexcl;</span> <span class="symbol">&amp;pound;</span></span><br><span class="line"><span class="symbol">&amp;amp;</span> <span class="symbol">&amp;lt;</span> <span class="symbol">&amp;gt;</span> <span class="symbol">&amp;yen;</span> <span class="symbol">&amp;euro;</span> <span class="symbol">&amp;reg;</span> <span class="symbol">&amp;plusmn;</span> <span class="symbol">&amp;para;</span> <span class="symbol">&amp;sect;</span> <span class="symbol">&amp;brvbar;</span> <span class="symbol">&amp;macr;</span> <span class="symbol">&amp;laquo;</span> <span class="symbol">&amp;middot;</span></span><br><span class="line"></span><br><span class="line">X&amp;sup2; Y&amp;sup3; &amp;frac34; &amp;frac14;  <span class="symbol">&amp;times;</span>  <span class="symbol">&amp;divide;</span>   <span class="symbol">&amp;raquo;</span></span><br><span class="line"></span><br><span class="line">18<span class="symbol">&amp;ordm;</span>C  <span class="symbol">&amp;quot;</span>  <span class="symbol">&amp;apos;</span></span><br></pre></td></tr></table></figure>
+<p>[========]</p>
+<h3 id="Emoji表情-smiley"><a href="#Emoji表情-smiley" class="headerlink" title="Emoji表情 :smiley:"></a>Emoji表情 :smiley:</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Blockquotes :star:</span><br></pre></td></tr></table></figure>
+
+<h4 id="GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><a href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x" class="headerlink" title="GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:"></a>GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <span class="tag">&lt;<span class="name">del</span>&gt;</span>tags<span class="tag">&lt;/<span class="name">del</span>&gt;</span> supported :editormd-logo:;</span><br><span class="line">- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;</span><br><span class="line">- [x] [ ] :smiley: this is a complete item :smiley:;</span><br><span class="line">- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao;</span><br><span class="line">- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;</span><br><span class="line">    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;</span><br><span class="line">    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);</span><br></pre></td></tr></table></figure>
+<h4 id="反斜杠-Escape"><a href="#反斜杠-Escape" class="headerlink" title="反斜杠 Escape"></a>反斜杠 Escape</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\*literal asterisks\*</span><br></pre></td></tr></table></figure>
+<p>[========]</p>
+<h3 id="科学公式-TeX-KaTeX"><a href="#科学公式-TeX-KaTeX" class="headerlink" title="科学公式 TeX(KaTeX)"></a>科学公式 TeX(KaTeX)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$$E=mc^2$$</span><br><span class="line"></span><br><span class="line">行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。</span><br><span class="line"></span><br><span class="line">$$x &gt; y$$</span><br><span class="line"></span><br><span class="line">$$\(\sqrt&#123;3x-1&#125;+(1+x)^2\)$$</span><br><span class="line"></span><br><span class="line">$$\sin(\alpha)^&#123;\theta&#125;=\sum_&#123;i=0&#125;^&#123;n&#125;(x^i + \cos(f))$$</span><br></pre></td></tr></table></figure>
+<p>多行公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">\left( \sum\_&#123;k&#x3D;1&#125;^n a\_k b\_k \right)^2</span><br><span class="line">\leq</span><br><span class="line">\left( \sum\_&#123;k&#x3D;1&#125;^n a\_k^2 \right)</span><br><span class="line">\left( \sum\_&#123;k&#x3D;1&#125;^n b\_k^2 \right)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">    \frac&#123;1&#125;&#123;</span><br><span class="line">        \Bigl(\sqrt&#123;\phi \sqrt&#123;5&#125;&#125;-\phi\Bigr) e^&#123;</span><br><span class="line">        \frac25 \pi&#125;&#125; &#x3D; 1+\frac&#123;e^&#123;-2\pi&#125;&#125; &#123;1+\frac&#123;e^&#123;-4\pi&#125;&#125; &#123;</span><br><span class="line">        1+\frac&#123;e^&#123;-6\pi&#125;&#125;</span><br><span class="line">        &#123;1+\frac&#123;e^&#123;-8\pi&#125;&#125;</span><br><span class="line">         &#123;1+\cdots&#125; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f(x) = <span class="tag">\<span class="name">int</span></span>_&#123;-<span class="tag">\<span class="name">infty</span></span>&#125;^<span class="tag">\<span class="name">infty</span></span></span><br><span class="line">    <span class="tag">\<span class="name">hat</span></span> f(<span class="tag">\<span class="name">xi</span></span>)<span class="tag">\<span class="name">,</span></span>e^&#123;2 <span class="tag">\<span class="name">pi</span></span> i <span class="tag">\<span class="name">xi</span></span> x&#125;</span><br><span class="line">    <span class="tag">\<span class="name">,</span></span>d<span class="tag">\<span class="name">xi</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="分页符-Page-break"><a href="#分页符-Page-break" class="headerlink" title="分页符 Page break"></a>分页符 Page break</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Print Test: Ctrl + P</span><br></pre></td></tr></table></figure>
+<p>[========]</p>
+<h3 id="绘制流程图-Flowchart"><a href="#绘制流程图-Flowchart" class="headerlink" title="绘制流程图 Flowchart"></a>绘制流程图 Flowchart</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 用户登陆</span><br><span class="line">op&#x3D;&gt;operation: 登陆操作</span><br><span class="line">cond&#x3D;&gt;condition: 登陆成功 Yes or No?</span><br><span class="line">e&#x3D;&gt;end: 进入后台</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
+<p>[========]</p>
+<h3 id="绘制序列图-Sequence-Diagram"><a href="#绘制序列图-Sequence-Diagram" class="headerlink" title="绘制序列图 Sequence Diagram"></a>绘制序列图 Sequence Diagram</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Andrew-&gt;China: Says Hello</span><br><span class="line">Note right of China: China thinks\nabout it</span><br><span class="line">China--&gt;Andrew: How are you?</span><br><span class="line">Andrew-&gt;&gt;China: I am good thanks!</span><br></pre></td></tr></table></figure>
+<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>陈坤
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://chenk.me/2020/10/17/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法">http://chenk.me/2020/10/17/MarkDown语法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 语法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/10/17/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈坤</span>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+       class Circle {
+    constructor({ origin, speed, color, angle, context }) {
+      this.origin = origin
+      this.position = { ...this.origin }
+      this.color = color
+      this.speed = speed
+      this.angle = angle
+      this.context = context
+      this.renderCount = 0
+    }
+  
+    draw() {
+      this.context.fillStyle = this.color
+      this.context.beginPath()
+      this.context.arc(this.position.x, this.position.y, 2, 0, Math.PI * 2)
+      this.context.fill()
+    }
+  
+    move() {
+      this.position.x = (Math.sin(this.angle) * this.speed) + this.position.x
+      this.position.y = (Math.cos(this.angle) * this.speed) + this.position.y + (this.renderCount * 0.3)
+      this.renderCount++
+    }
+  }
+  
+  class Boom {
+    constructor ({ origin, context, circleCount = 10, area }) {
+      this.origin = origin
+      this.context = context
+      this.circleCount = circleCount
+      this.area = area
+      this.stop = false
+      this.circles = []
+    }
+  
+    randomArray(range) {
+      const length = range.length
+      const randomIndex = Math.floor(length * Math.random())
+      return range[randomIndex]
+    }
+  
+    randomColor() {
+      const range = ['8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+      return '#' + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range)
+    }
+  
+    randomRange(start, end) {
+      return (end - start) * Math.random() + start
+    }
+  
+    init() {
+      for(let i = 0; i < this.circleCount; i++) {
+        const circle = new Circle({
+          context: this.context,
+          origin: this.origin,
+          color: this.randomColor(),
+          angle: this.randomRange(Math.PI - 1, Math.PI + 1),
+          speed: this.randomRange(1, 6)
+        })
+        this.circles.push(circle)
+      }
+    }
+  
+    move() {
+      this.circles.forEach((circle, index) => {
+        if (circle.position.x > this.area.width || circle.position.y > this.area.height) {
+          return this.circles.splice(index, 1)
+        }
+        circle.move()
+      })
+      if (this.circles.length == 0) {
+        this.stop = true
+      }
+    }
+  
+    draw() {
+      this.circles.forEach(circle => circle.draw())
+    }
+  }
+  
+  class CursorSpecialEffects {
+    constructor() {
+      this.computerCanvas = document.createElement('canvas')
+      this.renderCanvas = document.createElement('canvas')
+  
+      this.computerContext = this.computerCanvas.getContext('2d')
+      this.renderContext = this.renderCanvas.getContext('2d')
+  
+      this.globalWidth = window.innerWidth
+      this.globalHeight = window.innerHeight
+  
+      this.booms = []
+      this.running = false
+    }
+  
+    handleMouseDown(e) {
+      const boom = new Boom({
+        origin: { x: e.clientX, y: e.clientY },
+        context: this.computerContext,
+        area: {
+          width: this.globalWidth,
+          height: this.globalHeight
+        }
+      })
+      boom.init()
+      this.booms.push(boom)
+      this.running || this.run()
+    }
+  
+    handlePageHide() {
+      this.booms = []
+      this.running = false
+    }
+  
+    init() {
+      const style = this.renderCanvas.style
+      style.position = 'fixed'
+      style.top = style.left = 0
+      style.zIndex = '999999999999999999999999999999999999999999'
+      style.pointerEvents = 'none'
+  
+      style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth
+      style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight
+  
+      document.body.append(this.renderCanvas)
+  
+      window.addEventListener('mousedown', this.handleMouseDown.bind(this))
+      window.addEventListener('pagehide', this.handlePageHide.bind(this))
+    }
+  
+    run() {
+      this.running = true
+      if (this.booms.length == 0) {
+        return this.running = false
+      }
+  
+      requestAnimationFrame(this.run.bind(this))
+  
+      this.computerContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+      this.renderContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+  
+      this.booms.forEach((boom, index) => {
+        if (boom.stop) {
+          return this.booms.splice(index, 1)
+        }
+        boom.move()
+        boom.draw()
+      })
+      this.renderContext.drawImage(this.computerCanvas, 0, 0, this.globalWidth, this.globalHeight)
+    }
+  }
+  try{
+    module.exports.default = module.exports = CursorSpecialEffects
+  }
+  catch(err){
+    console.log("错误",err);
+  }
+</script>
+<script>
+    var yh = new CursorSpecialEffects();
+    yh.init();
+</script>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

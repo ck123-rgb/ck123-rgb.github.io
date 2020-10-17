@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-my.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-my.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-my.ico">
+  <link rel="mask-icon" href="/images/logo-my.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -194,9 +194,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -217,6 +229,9 @@
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
           <a href="https://www.iaia.cc/" title="https:&#x2F;&#x2F;www.iaia.cc" rel="noopener" target="_blank">DIYsay</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.qinxuege.com/" title="https:&#x2F;&#x2F;www.qinxuege.com" rel="noopener" target="_blank">zhangs</a>
         </li>
     </ul>
   </div>
@@ -269,10 +284,10 @@
       <div class="post-body">
           <div class="category-all-page">
   <div class="category-all-title">
-    暂无分类
+    目前共计 1 个分类
   </div>
   <div class="category-all">
-    
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%BF%E7%94%A8/">使用</a><span class="category-list-count">1</span></li></ul>
   </div>
 </div>
 
@@ -332,6 +347,171 @@
   <span class="author" itemprop="copyrightHolder">陈坤</span>
 </div>
 
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+       class Circle {
+    constructor({ origin, speed, color, angle, context }) {
+      this.origin = origin
+      this.position = { ...this.origin }
+      this.color = color
+      this.speed = speed
+      this.angle = angle
+      this.context = context
+      this.renderCount = 0
+    }
+  
+    draw() {
+      this.context.fillStyle = this.color
+      this.context.beginPath()
+      this.context.arc(this.position.x, this.position.y, 2, 0, Math.PI * 2)
+      this.context.fill()
+    }
+  
+    move() {
+      this.position.x = (Math.sin(this.angle) * this.speed) + this.position.x
+      this.position.y = (Math.cos(this.angle) * this.speed) + this.position.y + (this.renderCount * 0.3)
+      this.renderCount++
+    }
+  }
+  
+  class Boom {
+    constructor ({ origin, context, circleCount = 10, area }) {
+      this.origin = origin
+      this.context = context
+      this.circleCount = circleCount
+      this.area = area
+      this.stop = false
+      this.circles = []
+    }
+  
+    randomArray(range) {
+      const length = range.length
+      const randomIndex = Math.floor(length * Math.random())
+      return range[randomIndex]
+    }
+  
+    randomColor() {
+      const range = ['8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+      return '#' + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range)
+    }
+  
+    randomRange(start, end) {
+      return (end - start) * Math.random() + start
+    }
+  
+    init() {
+      for(let i = 0; i < this.circleCount; i++) {
+        const circle = new Circle({
+          context: this.context,
+          origin: this.origin,
+          color: this.randomColor(),
+          angle: this.randomRange(Math.PI - 1, Math.PI + 1),
+          speed: this.randomRange(1, 6)
+        })
+        this.circles.push(circle)
+      }
+    }
+  
+    move() {
+      this.circles.forEach((circle, index) => {
+        if (circle.position.x > this.area.width || circle.position.y > this.area.height) {
+          return this.circles.splice(index, 1)
+        }
+        circle.move()
+      })
+      if (this.circles.length == 0) {
+        this.stop = true
+      }
+    }
+  
+    draw() {
+      this.circles.forEach(circle => circle.draw())
+    }
+  }
+  
+  class CursorSpecialEffects {
+    constructor() {
+      this.computerCanvas = document.createElement('canvas')
+      this.renderCanvas = document.createElement('canvas')
+  
+      this.computerContext = this.computerCanvas.getContext('2d')
+      this.renderContext = this.renderCanvas.getContext('2d')
+  
+      this.globalWidth = window.innerWidth
+      this.globalHeight = window.innerHeight
+  
+      this.booms = []
+      this.running = false
+    }
+  
+    handleMouseDown(e) {
+      const boom = new Boom({
+        origin: { x: e.clientX, y: e.clientY },
+        context: this.computerContext,
+        area: {
+          width: this.globalWidth,
+          height: this.globalHeight
+        }
+      })
+      boom.init()
+      this.booms.push(boom)
+      this.running || this.run()
+    }
+  
+    handlePageHide() {
+      this.booms = []
+      this.running = false
+    }
+  
+    init() {
+      const style = this.renderCanvas.style
+      style.position = 'fixed'
+      style.top = style.left = 0
+      style.zIndex = '999999999999999999999999999999999999999999'
+      style.pointerEvents = 'none'
+  
+      style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth
+      style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight
+  
+      document.body.append(this.renderCanvas)
+  
+      window.addEventListener('mousedown', this.handleMouseDown.bind(this))
+      window.addEventListener('pagehide', this.handlePageHide.bind(this))
+    }
+  
+    run() {
+      this.running = true
+      if (this.booms.length == 0) {
+        return this.running = false
+      }
+  
+      requestAnimationFrame(this.run.bind(this))
+  
+      this.computerContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+      this.renderContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+  
+      this.booms.forEach((boom, index) => {
+        if (boom.stop) {
+          return this.booms.splice(index, 1)
+        }
+        boom.move()
+        boom.draw()
+      })
+      this.renderContext.drawImage(this.computerCanvas, 0, 0, this.globalWidth, this.globalHeight)
+    }
+  }
+  try{
+    module.exports.default = module.exports = CursorSpecialEffects
+  }
+  catch(err){
+    console.log("错误",err);
+  }
+</script>
+<script>
+    var yh = new CursorSpecialEffects();
+    yh.init();
+</script>
+
     </div>
   </footer>
 
@@ -374,5 +554,3 @@
 
 </body>
 </html>
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/love.js"></script>
