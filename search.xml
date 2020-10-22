@@ -72,7 +72,132 @@
     <title>git安装</title>
     <url>/2020/10/22/git%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p><strong>git安装详细教程</strong></p>
-<p><img src="/images_blog/git-install/git-install-1.png" alt="avatar"></p>
+<p><img src="/images_blog/git-install/git-install-1.png" alt="gti"></p>
+<a id="more"></a>
+
+<h2 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h2><pre><code>[下载地址](https://git-scm.com/downloads)</code></pre>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>双击进入安装程序</p>
+<ol>
+<li>使用许可声明</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-2.png" alt="gti"></p>
+<blockquote>
+<p>点击next进入下一个界面</p>
+</blockquote>
+<ol start="2">
+<li>选择安装路径</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-3.png" alt="gti"></p>
+<blockquote>
+<p>选择安装目录后点击next</p>
+</blockquote>
+<ol start="3">
+<li>选择安装组件</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-4.png" alt="gti"></p>
+<blockquote>
+<p>上图红框内的选项是默认勾选的，建议不要动。绿色框1是决定是否在桌面创建快捷方式的。绿色框2是决定在所有控制台窗口中使用TrueType字体和是否每天检查Git是否有Windows更新的。这些根据自己需要选择。</p>
+</blockquote>
+<ol start="4">
+<li>选择开始菜单页</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-5.png" alt="gti"></p>
+<blockquote>
+<p>这个页面是添加开始菜单，也可以选中下方框框，不添加开始菜单</p>
+</blockquote>
+<ol start="5">
+<li>选择git文件默认的编辑器</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-6.png" alt="gti"></p>
+<blockquote>
+<p>这个页面是在选择Git文件默认的编辑器，很少用到，所以默认Vim即可，直接点“Next”按钮继续到下图的界面</p>
+</blockquote>
+<ol start="6">
+<li>调整你的PATH环境</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-7.png" alt="gti"></p>
+<p>这个界面是调整您的PATH环境。</p>
+<pre><code>第一种配置是“仅从Git Bash使用Git”。这是最安全的选择，因为您的PATH根本不会被修改。您只能使用 Git Bash 的 Git 命令行工具。但是这将不能通过第三方软件使用。
+
+第二种配置是“从命令行以及第三方软件进行Git”。该选项被认为是安全的，因为它仅向PATH添加了一些最小的Git包装器，以避免使用可选的Unix工具造成环境混乱。</code></pre>
+<p>您将能够从Git Bash，命令提示符和Windows PowerShell以及在PATH中寻找Git的任何第三方软件中使用Git。这也是推荐的选项。</p>
+<pre><code>第三种配置是“从命令提示符使用Git和可选的Unix工具”。警告：这将覆盖Windows工具，如 “ find 和 sort ”。只有在了解其含义后才使用此选项。
+
+默认第二种配置，点击“Next”按钮继续到下图的界面</code></pre>
+<ol start="7">
+<li>选择https后端传输</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-8.png" alt="gti"></p>
+<p>这个界面是选择HTTPS后端传输。</p>
+<pre><code>第一个选项是“使用 OpenSSL 库”。服务器证书将使用ca-bundle.crt文件进行验证。这也是我们常用的选项。
+
+第二个选项是“使用本地 Windows 安全通道库”。服务器证书将使用Windows证书存储验证。此选项还允许您使用公司的内部根CA证书，例如通过Active Directory Domain Services 。
+
+默认选择第一项，点击“Next”按钮继续到下图的界面：</code></pre>
+<ol start="8">
+<li>配置行尾符号转换</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-9.png" alt="gti"></p>
+<p>这个界面是配置行尾符号转换。</p>
+<pre><code>第一个选项是“签出Windows风格，提交Unix风格的行尾”。签出文本文件时，Git会将LF转换为CRLF。提交文本文件时，CRLF将转换为LF。对于跨平台项目，这是Windows上的推荐设置（“ core.autocrlf”设置为“ true”）
+
+第二个选项是“按原样签出，提交Unix样式的行尾”。签出文本文件时，Git不会执行任何转换。 提交文本文件时，CRLF将转换为LF。对于跨平台项目，这是Unix上的建议设置（“ core.autocrlf”设置为“ input”）
+
+第三种选项是“按原样签出，按原样提交”。当签出或提交文本文件时，Git不会执行任何转换。不建议跨平台项目选择此选项（“ core.autocrlf”设置为“ false”）
+
+选择第一种选项，点击“Next”按钮继续到下图的界面：</code></pre>
+<ol start="9">
+<li>配置终端模拟器已与Git Bash 一起使用</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-10.png" alt="gti"></p>
+<p>这个界面是配置终端模拟器以与Git Bash一起使用。</p>
+<pre><code>第一个选项是“使用MinTTY（MSYS2的默认终端）”。Git Bash将使用MinTTY作为终端模拟器，该模拟器具有可调整大小的窗口，非矩形选择和Unicode字体。Windows控制台程序（例如交互式Python）必须通过“ winpty”启动才能在MinTTY中运行。
+
+第二个选项是“使用Windows的默认控制台窗口”。Git将使用Windows的默认控制台窗口（“cmd.exe”），该窗口可以与Win32控制台程序（如交互式Python或node.js）一起使用，但默认的回滚非常有限，需要配置为使用unicode 字体以正确显示非ASCII字符，并且在Windows 10之前，其窗口不能自由调整大小，并且只允许矩形文本选择。
+
+默认选择的第一种选项，点击“Next”按钮继续到下图的界面：</code></pre>
+<ol start="10">
+<li>配置额外的选项</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-11.png" alt="gti"></p>
+<p>这个界面是配置配置额外的选项。</p>
+<pre><code>第一个选项是“启用文件系统缓存”。文件系统数据将被批量读取并缓存在内存中用于某些操作（“core.fscache”设置为“true”）。 这提供了显著的性能提升。
+
+第二个选项是“启用Git凭证管理器”。Windows的Git凭证管理器为Windows提供安全的Git凭证存储，最显着的是对Visual Studio Team Services和GitHub的多因素身份验证支持。 （需要.NET Framework v4.5.1或更高版本）。
+
+第三个选项是“启用符号链接”。启用符号链接（需要SeCreateSymbolicLink权限）。请注意，现有存储库不受此设置的影响。
+
+默认选择第一、第二选项，点击“Next”按钮继续到下图的界面：</code></pre>
+<ol start="11">
+<li>配置实验选项</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-12.png" alt="gti"></p>
+<p>这个界面是配置实验选项。</p>
+<pre><code>启用实验性的内置添加 -i / -p。（新！）使用实验性的内置交互式add（“ git add -i”或“ git add -p”）。这使其速度更快（尤其是启动！），但尚未被认为是可靠的。
+
+默认不勾选，直接点击“Next”按钮继续到下图的安装进度界面</code></pre>
+<ol start="12">
+<li>安装进度提示</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-13.png" alt="gti"></p>
+<p>安装进度结束之后，会出现下图的完成Git安装向导界面</p>
+<ol start="13">
+<li>安装完成</li>
+</ol>
+<p><img src="/images_blog/git-install/git-install-14.png" alt="gti"></p>
+<p>在这个界面，可以勾选是否启动启动Git Bash和是否查看发行说明，然后点“Finish”按钮退出安装界面。</p>
+<ol start="14">
+<li>启动测试</li>
+</ol>
+<p>到此，Git的安装完成，可以在开始菜单中看到Git的两个个启动图标（Git Bash、Git GUI）。</p>
+<p>  Git Bash，是Git配套的一个控制台，点击打开如下图：</p>
+<p><img src="/images_blog/git-install/git-install-15.png" alt="gti"></p>
+<p>Git GUI，是Git的可视化操作工具，点击打开如下图：</p>
+<p><img src="/images_blog/git-install/git-install-16.png" alt="gti"></p>
+<p>以上就是git安装的全过程</p>
+<h2 id="全局使用git"><a href="#全局使用git" class="headerlink" title="全局使用git"></a>全局使用git</h2><blockquote>
+<p>如果想在全局使用git在系统环境变量中找到path在里面添加<code>git安装路径\cmd</code></p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>安装</tag>
