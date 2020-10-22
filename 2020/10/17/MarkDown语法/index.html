@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"chenk.me","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"chenk.me","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="MarkDown语法">
@@ -122,6 +122,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -155,11 +156,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -184,7 +212,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E4%BD%BF%E7%94%A8"><span class="nav-text">标题使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89"><span class="nav-text">字符效果和横线等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8-Blockquotes"><span class="nav-text">引用 Blockquotes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-Links"><span class="nav-text">锚点与链接 Links</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC"><span class="nav-text">缩进风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%A3%E7%A0%81"><span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML-%E4%BB%A3%E7%A0%81-HTML-codes"><span class="nav-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87-Images"><span class="nav-text">图片 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8-Lists"><span class="nav-text">列表 Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%87%8F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E6%98%9F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97%EF%BC%89Unordered-Lists"><span class="nav-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-Ordered-Lists"><span class="nav-text">有序列表 Ordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-list"><span class="nav-text">GFM task list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-Tables"><span class="nav-text">绘制表格 Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-HTML-Entities-Codes"><span class="nav-text">特殊符号 HTML Entities Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Emoji%E8%A1%A8%E6%83%85-smiley"><span class="nav-text">Emoji表情 :smiley:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><span class="nav-text">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-Escape"><span class="nav-text">反斜杠 Escape</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-TeX-KaTeX"><span class="nav-text">科学公式 TeX(KaTeX)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E7%AC%A6-Page-break"><span class="nav-text">分页符 Page break</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE-Flowchart"><span class="nav-text">绘制流程图 Flowchart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE-Sequence-Diagram"><span class="nav-text">绘制序列图 Sequence Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#End"><span class="nav-text">End</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">标题使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89"><span class="nav-number">2.</span> <span class="nav-text">字符效果和横线等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8-Blockquotes"><span class="nav-number">3.</span> <span class="nav-text">引用 Blockquotes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-Links"><span class="nav-number">4.</span> <span class="nav-text">锚点与链接 Links</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC"><span class="nav-number">4.1.</span> <span class="nav-text">缩进风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%A3%E7%A0%81"><span class="nav-number">4.2.</span> <span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML-%E4%BB%A3%E7%A0%81-HTML-codes"><span class="nav-number">4.3.</span> <span class="nav-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87-Images"><span class="nav-number">5.</span> <span class="nav-text">图片 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8-Lists"><span class="nav-number">6.</span> <span class="nav-text">列表 Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%87%8F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">6.1.</span> <span class="nav-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E6%98%9F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">6.2.</span> <span class="nav-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97%EF%BC%89Unordered-Lists"><span class="nav-number">6.3.</span> <span class="nav-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-Ordered-Lists"><span class="nav-number">6.4.</span> <span class="nav-text">有序列表 Ordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-list"><span class="nav-number">6.5.</span> <span class="nav-text">GFM task list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-Tables"><span class="nav-number">7.</span> <span class="nav-text">绘制表格 Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-HTML-Entities-Codes"><span class="nav-number">7.1.</span> <span class="nav-text">特殊符号 HTML Entities Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Emoji%E8%A1%A8%E6%83%85-smiley"><span class="nav-number">8.</span> <span class="nav-text">Emoji表情 :smiley:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><span class="nav-number">8.1.</span> <span class="nav-text">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-Escape"><span class="nav-number">8.2.</span> <span class="nav-text">反斜杠 Escape</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-TeX-KaTeX"><span class="nav-number">9.</span> <span class="nav-text">科学公式 TeX(KaTeX)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E7%AC%A6-Page-break"><span class="nav-number">10.</span> <span class="nav-text">分页符 Page break</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE-Flowchart"><span class="nav-number">11.</span> <span class="nav-text">绘制流程图 Flowchart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE-Sequence-Diagram"><span class="nav-number">12.</span> <span class="nav-text">绘制序列图 Sequence Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#End"><span class="nav-number">13.</span> <span class="nav-text">End</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -661,6 +689,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 
