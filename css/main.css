@@ -48,6 +48,11 @@
     --highlight-gutter-foreground: #eaeaea;
   }
   img {
+	margin-bottom: 20px;
+	width: 500px;
+	height: 300px;
+	border: 2px solid #FFCCCC;  
+	border-radius: 10px;
     opacity: 0.75;
   }
   img:hover {
