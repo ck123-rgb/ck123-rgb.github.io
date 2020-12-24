@@ -117,10 +117,6 @@ sup {
   top: -0.5em;
 }
 img {
-  width: 500px;
-  height: 300px;
-  border: 2px solid #FFCCCC;  
-  border-radius: 10px;
   border-style: none;
 }
 button,
