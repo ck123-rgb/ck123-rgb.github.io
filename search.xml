@@ -750,4 +750,53 @@
         <tag>代码片段</tag>
       </tags>
   </entry>
+  <entry>
+    <title>idea使用git托管代码</title>
+    <url>/2021/01/16/idea%E4%BD%BF%E7%94%A8git%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p><strong>idea中使用git来管理我们的代码</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-0.png" alt="next"></p>
+<a id="more"></a>
+
+<h2 id="在gitee中拥有一个仓库"><a href="#在gitee中拥有一个仓库" class="headerlink" title="在gitee中拥有一个仓库"></a>在gitee中拥有一个仓库</h2><p><strong>在<a href="https://gitee.com/">gitee</a>上建立一个自己的仓库</strong><br><strong>如下图</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-1.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-2.png" alt="next"></p>
+<p>仓库建好之后如下图</p>
+<p><img src="/images_blog/idea-git/idea-git-3.png" alt="next"></p>
+<p>现在的仓库中没有任何代码，下面去idea中编写代码并托管到git上吧</p>
+<h2 id="在idea中配置git"><a href="#在idea中配置git" class="headerlink" title="在idea中配置git"></a>在idea中配置git</h2><p>新建一个Java项目，项目名最好和仓库名一致</p>
+<p>在idea中配置git</p>
+<p>依次点击<strong>File –&gt; Settings</strong>在打开的窗口中依次找到<strong>Version Control –&gt; git</strong> 或者直接搜索git</p>
+<p><img src="/images_blog/idea-git/idea-git-4.png" alt="next"></p>
+<p>上图为在idea中配置git，这一步很重要，如果没有配置成功，无法使用git功能</p>
+<h2 id="将代码托管到git仓库中"><a href="#将代码托管到git仓库中" class="headerlink" title="将代码托管到git仓库中"></a>将代码托管到git仓库中</h2><p><img src="/images_blog/idea-git/idea-git-5.png" alt="next"></p>
+<p>按照上图依次点击，选择刚才创建的Java项目作为git仓库，到这一步我们的本地仓库就已经建好了，现在只要把代码上传就完成了代码托管。</p>
+<h2 id="代码上传"><a href="#代码上传" class="headerlink" title="代码上传"></a>代码上传</h2><p><img src="/images_blog/idea-git/idea-git-6.png" alt="next"></p>
+<p>第一步、按照上图选中项目<strong>右键点击</strong>选择<strong>git</strong>选择<strong>add</strong> </p>
+<p><img src="/images_blog/idea-git/idea-git-7.png" alt="next"></p>
+<p>第二步、按照上图选中项目<strong>右键点击</strong>选择<strong>git</strong>选择<strong>Commit Directory</strong>进入如下界面</p>
+<p><img src="/images_blog/idea-git/idea-git-8.png" alt="next"></p>
+<p>点击commit后可能会出现如下图所示窗口，不用理会</p>
+<p><img src="/images_blog/idea-git/idea-git-9.png" alt="next"></p>
+<p>到现在为止，我们的代码已经提交到了本地的仓库，文件的颜色已经全部正常，现在我们只要把文件提交到git仓库就可以了。</p>
+<p><strong>右键点击项目 –&gt; Git –&gt; Repository –&gt; Push</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-10.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-11.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-12.png" alt="next"></p>
+<p>进入你刚才创建的仓库，会看见下图，就是你的仓库地址</p>
+<p><img src="/images_blog/idea-git/idea-git-13.png" alt="next"></p>
+<p>填写完仓库地址，点击ok，如果是第一次使用会弹出账号密码窗口，填写自己的gitee的账号和密码，确认就可以了，最好不要填错，填错账号密码之后怎么解决，本文不会写解决方法。如果以前填写过账号和密码就不会弹出填写账号和密码界面。填写完成之后会出现如下界面。</p>
+<p><img src="/images_blog/idea-git/idea-git-14.png" alt="next"></p>
+<p>点击之后就会提示，代码已经提交到了远程仓库。</p>
+<h2 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h2><p><strong>右键点击项目 –&gt; Git –&gt; Repository –&gt; Pull</strong></p>
+<p>出现拉取界面，直接点击pull拉取代码就可以了，如果有分支，注意分支问题</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>流程：</strong><br>1、在gitee中创建一个仓库<br>2、在idea中新建一个Java项目，项目名最好和仓库名一致<br>3、在idea中配置git（如果已经配置过则不需要）<br>4、点击<strong>VCS</strong> –&gt; <strong>import into Version Control</strong> –&gt; <strong>Create Git Repository</strong> 选择刚才创建的项目，作为本地仓库<br>5、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>add</strong><br>6、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>Commit Directory</strong> 填写好提交信息，进行提交，将代码提交到本地仓库<br>7、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>Repository</strong> –&gt; <strong>Push</strong><br>8、在弹出的界面中点击左上角的 Define remote 定义远程<br>9、填写gitee仓库地址<br>10、填写gitee账号和密码（如果以前填写过则没有这一步）<br>11、选择自己刚才提交的提交信息（代表了这一次提交），进行提交，提交成功之后，代码就在远程仓库了</p>
+<p><strong>注意：</strong><br>1、在上传代码的过程中，如果你只想上传一个文件夹（包）你需要在包里面新建一个文件，因为不允许空文件夹上传。<br>2、账号密码一定要填写正确，一旦填写错误自行寻找解决办法。</p>
+]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
 </search>

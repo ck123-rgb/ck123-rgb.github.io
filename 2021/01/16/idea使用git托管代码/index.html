@@ -22,16 +22,37 @@
     var CONFIG = {"hostname":"chenk.me","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BigChen">
-<meta property="og:url" content="http://chenk.me/archives/2020/index.html">
+  <meta name="description" content="idea中使用git来管理我们的代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="idea使用git托管代码">
+<meta property="og:url" content="http://chenk.me/2021/01/16/idea%E4%BD%BF%E7%94%A8git%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="BigChen">
+<meta property="og:description" content="idea中使用git来管理我们的代码">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-0.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-1.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-2.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-3.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-4.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-5.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-6.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-7.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-8.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-9.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-10.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-11.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-12.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-13.png">
+<meta property="og:image" content="http://chenk.me/images_blog/idea-git/idea-git-14.png">
+<meta property="article:published_time" content="2021-01-16T06:12:37.000Z">
+<meta property="article:modified_time" content="2021-01-16T09:25:51.827Z">
 <meta property="article:author" content="陈坤">
+<meta property="article:tag" content="配置">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chenk.me/images_blog/idea-git/idea-git-0.png">
 
 
-<link rel="canonical" href="http://chenk.me/archives/2020/">
+<link rel="canonical" href="http://chenk.me/2021/01/16/idea%E4%BD%BF%E7%94%A8git%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81/">
 
 
 <script class="page-configurations">
@@ -39,12 +60,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | BigChen</title>
+  <title>idea使用git托管代码 | BigChen</title>
   
 
 
@@ -192,7 +213,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -204,6 +225,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8gitee%E4%B8%AD%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">在gitee中拥有一个仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8idea%E4%B8%AD%E9%85%8D%E7%BD%AEgit"><span class="nav-number">2.</span> <span class="nav-text">在idea中配置git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%88%B0git%E4%BB%93%E5%BA%93%E4%B8%AD"><span class="nav-number">3.</span> <span class="nav-text">将代码托管到git仓库中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0"><span class="nav-number">4.</span> <span class="nav-text">代码上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">拉取代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -272,236 +294,150 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 13 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chenk.me/2021/01/16/idea%E4%BD%BF%E7%94%A8git%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="陈坤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BigChen">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          idea使用git托管代码
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+      <time title="创建时间：2021-01-16 14:12:37 / 修改时间：17:25:51" itemprop="dateCreated datePublished" datetime="2021-01-16T14:12:37+08:00">2021-01-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">环境搭建</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>idea中使用git来管理我们的代码</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-0.png" alt="next"></p>
+<a id="more"></a>
+
+<h2 id="在gitee中拥有一个仓库"><a href="#在gitee中拥有一个仓库" class="headerlink" title="在gitee中拥有一个仓库"></a>在gitee中拥有一个仓库</h2><p><strong>在<a target="_blank" rel="noopener" href="https://gitee.com/">gitee</a>上建立一个自己的仓库</strong><br><strong>如下图</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-1.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-2.png" alt="next"></p>
+<p>仓库建好之后如下图</p>
+<p><img src="/images_blog/idea-git/idea-git-3.png" alt="next"></p>
+<p>现在的仓库中没有任何代码，下面去idea中编写代码并托管到git上吧</p>
+<h2 id="在idea中配置git"><a href="#在idea中配置git" class="headerlink" title="在idea中配置git"></a>在idea中配置git</h2><p>新建一个Java项目，项目名最好和仓库名一致</p>
+<p>在idea中配置git</p>
+<p>依次点击<strong>File –&gt; Settings</strong>在打开的窗口中依次找到<strong>Version Control –&gt; git</strong> 或者直接搜索git</p>
+<p><img src="/images_blog/idea-git/idea-git-4.png" alt="next"></p>
+<p>上图为在idea中配置git，这一步很重要，如果没有配置成功，无法使用git功能</p>
+<h2 id="将代码托管到git仓库中"><a href="#将代码托管到git仓库中" class="headerlink" title="将代码托管到git仓库中"></a>将代码托管到git仓库中</h2><p><img src="/images_blog/idea-git/idea-git-5.png" alt="next"></p>
+<p>按照上图依次点击，选择刚才创建的Java项目作为git仓库，到这一步我们的本地仓库就已经建好了，现在只要把代码上传就完成了代码托管。</p>
+<h2 id="代码上传"><a href="#代码上传" class="headerlink" title="代码上传"></a>代码上传</h2><p><img src="/images_blog/idea-git/idea-git-6.png" alt="next"></p>
+<p>第一步、按照上图选中项目<strong>右键点击</strong>选择<strong>git</strong>选择<strong>add</strong> </p>
+<p><img src="/images_blog/idea-git/idea-git-7.png" alt="next"></p>
+<p>第二步、按照上图选中项目<strong>右键点击</strong>选择<strong>git</strong>选择<strong>Commit Directory</strong>进入如下界面</p>
+<p><img src="/images_blog/idea-git/idea-git-8.png" alt="next"></p>
+<p>点击commit后可能会出现如下图所示窗口，不用理会</p>
+<p><img src="/images_blog/idea-git/idea-git-9.png" alt="next"></p>
+<p>到现在为止，我们的代码已经提交到了本地的仓库，文件的颜色已经全部正常，现在我们只要把文件提交到git仓库就可以了。</p>
+<p><strong>右键点击项目 –&gt; Git –&gt; Repository –&gt; Push</strong></p>
+<p><img src="/images_blog/idea-git/idea-git-10.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-11.png" alt="next"></p>
+<p><img src="/images_blog/idea-git/idea-git-12.png" alt="next"></p>
+<p>进入你刚才创建的仓库，会看见下图，就是你的仓库地址</p>
+<p><img src="/images_blog/idea-git/idea-git-13.png" alt="next"></p>
+<p>填写完仓库地址，点击ok，如果是第一次使用会弹出账号密码窗口，填写自己的gitee的账号和密码，确认就可以了，最好不要填错，填错账号密码之后怎么解决，本文不会写解决方法。如果以前填写过账号和密码就不会弹出填写账号和密码界面。填写完成之后会出现如下界面。</p>
+<p><img src="/images_blog/idea-git/idea-git-14.png" alt="next"></p>
+<p>点击之后就会提示，代码已经提交到了远程仓库。</p>
+<h2 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h2><p><strong>右键点击项目 –&gt; Git –&gt; Repository –&gt; Pull</strong></p>
+<p>出现拉取界面，直接点击pull拉取代码就可以了，如果有分支，注意分支问题</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>流程：</strong><br>1、在gitee中创建一个仓库<br>2、在idea中新建一个Java项目，项目名最好和仓库名一致<br>3、在idea中配置git（如果已经配置过则不需要）<br>4、点击<strong>VCS</strong> –&gt; <strong>import into Version Control</strong> –&gt; <strong>Create Git Repository</strong> 选择刚才创建的项目，作为本地仓库<br>5、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>add</strong><br>6、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>Commit Directory</strong> 填写好提交信息，进行提交，将代码提交到本地仓库<br>7、右键点击项目 –&gt; <strong>Git</strong> –&gt; <strong>Repository</strong> –&gt; <strong>Push</strong><br>8、在弹出的界面中点击左上角的 Define remote 定义远程<br>9、填写gitee仓库地址<br>10、填写gitee账号和密码（如果以前填写过则没有这一步）<br>11、选择自己刚才提交的提交信息（代表了这一次提交），进行提交，提交成功之后，代码就在远程仓库了</p>
+<p><strong>注意：</strong><br>1、在上传代码的过程中，如果你只想上传一个文件夹（包）你需要在包里面新建一个文件，因为不允许空文件夹上传。<br>2、账号密码一定要填写正确，一旦填写错误自行寻找解决办法。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-30T16:26:45+08:00"
-              content="2020-12-30">
-          12-30
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/30/%E7%BB%9F%E8%AE%A1%E5%8D%95%E8%AF%8D/" itemprop="url">
-            <span itemprop="name">统计单词</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          
 
-      
-    </header>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>陈坤
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://chenk.me/2021/01/16/idea%E4%BD%BF%E7%94%A8git%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81/" title="idea使用git托管代码">http://chenk.me/2021/01/16/idea使用git托管代码/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag"><i class="fa fa-tag"></i> 配置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/30/%E7%BB%9F%E8%AE%A1%E5%8D%95%E8%AF%8D/" rel="prev" title="统计单词">
+                  <i class="fa fa-chevron-left"></i> 统计单词
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-24T15:51:37+08:00"
-              content="2020-12-24">
-          12-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/24/ssm%E9%85%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">ssm配置</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-06T10:43:07+08:00"
-              content="2020-12-06">
-          12-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/06/%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" itemprop="url">
-            <span itemprop="name">序列化与反序列化</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-23T21:02:16+08:00"
-              content="2020-10-23">
-          10-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/23/next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">next主题配置</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-23T14:51:19+08:00"
-              content="2020-10-23">
-          10-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/23/heox%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" itemprop="url">
-            <span itemprop="name">heox博客更换主题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-23T14:23:36+08:00"
-              content="2020-10-23">
-          10-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/23/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-            <span itemprop="name">使用hexo搭建个人博客</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-23T13:30:04+08:00"
-              content="2020-10-23">
-          10-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/23/node-js%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">node.js安装</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-22T08:59:43+08:00"
-              content="2020-10-22">
-          10-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/22/git%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">git安装</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-21T20:17:41+08:00"
-              content="2020-10-21">
-          10-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/21/%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/" itemprop="url">
-            <span itemprop="name">邮件发送</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-17T23:25:00+08:00"
-              content="2020-10-17">
-          10-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/17/MySQL%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">MySQL安装</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
