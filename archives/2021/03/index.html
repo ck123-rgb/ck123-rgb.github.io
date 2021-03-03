@@ -22,35 +22,16 @@
     var CONFIG = {"hostname":"chenk.me","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="安装node.js并搭建一个自己的个人博客">
-<meta property="og:type" content="article">
-<meta property="og:title" content="node.js安装">
-<meta property="og:url" content="http://chenk.me/2020/10/23/node-js%E5%AE%89%E8%A3%85/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="BigChen">
+<meta property="og:url" content="http://chenk.me/archives/2021/03/index.html">
 <meta property="og:site_name" content="BigChen">
-<meta property="og:description" content="安装node.js并搭建一个自己的个人博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-0.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-1.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-2.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-3.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-4.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-5.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-6.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-7.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-8.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-9.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-10.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-11.png">
-<meta property="og:image" content="http://chenk.me/images_blog/node-install/node-install-12.png">
-<meta property="article:published_time" content="2020-10-23T05:30:04.000Z">
-<meta property="article:modified_time" content="2020-10-23T14:49:12.454Z">
 <meta property="article:author" content="陈坤">
-<meta property="article:tag" content="安装">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://chenk.me/images_blog/node-install/node-install-0.png">
 
 
-<link rel="canonical" href="http://chenk.me/2020/10/23/node-js%E5%AE%89%E8%A3%85/">
+<link rel="canonical" href="http://chenk.me/archives/2021/03/">
 
 
 <script class="page-configurations">
@@ -58,12 +39,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>node.js安装 | BigChen</title>
+  <title>归档 | BigChen</title>
   
 
 
@@ -211,7 +192,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -223,7 +204,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDnode-js%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">下载node.js安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEnpm%E5%9C%A8%E5%AE%89%E8%A3%85%E5%85%A8%E5%B1%80%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BC%93%E5%AD%98cache%E8%B7%AF%E5%BE%84"><span class="nav-number">3.</span> <span class="nav-text">配置npm在安装全局模块时的路径和缓存cache路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F"><span class="nav-number">4.</span> <span class="nav-text">配置淘宝镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">5.</span> <span class="nav-text">修改路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">6.</span> <span class="nav-text">安装hexo</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -292,176 +272,53 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
       
 
       
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 14 篇日志。 继续努力。</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://chenk.me/2020/10/23/node-js%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="陈坤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BigChen">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          node.js安装
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
       
-
-      <time title="创建时间：2020-10-23 13:30:04 / 修改时间：22:49:12" itemprop="dateCreated datePublished" datetime="2020-10-23T13:30:04+08:00">2020-10-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">个人博客</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p><strong>安装node.js并搭建一个自己的个人博客</strong></p>
-<p><img src="/images_blog/node-install/node-install-0.png" alt="blog"></p>
-<a id="more"></a>
-
-<h2 id="下载node-js安装包"><a href="#下载node-js安装包" class="headerlink" title="下载node.js安装包"></a>下载node.js安装包</h2><p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">点击下载</a></p>
-<p><img src="/images_blog/node-install/node-install-1.png" alt="blog"></p>
-<p><strong>推荐下载稳定版本</strong></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li>双击进入安装程序</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-2.png" alt="blog"></p>
-<ol start="2">
-<li>统一协议</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-3.png" alt="blog"></p>
-<ol start="3">
-<li>选择安装位置</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-4.png" alt="blog"></p>
-<ol start="4">
-<li>默认安装</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-5.png" alt="blog"></p>
-<ol start="5">
-<li>安装</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-6.png" alt="blog"></p>
-<ol start="6">
-<li>安装进度条</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-7.png" alt="blog"></p>
-<ol start="7">
-<li>完成安装</li>
-</ol>
-<p><img src="/images_blog/node-install/node-install-8.png" alt="blog"></p>
-<ol start="8">
-<li>查看是否安装成功</li>
-</ol>
-<p>安装成功，文件夹结构如下，并在上面安装过程中已自动配置了环境变量和安装好了npm包，此时可以执行<code>node -v</code>和<code>npm -v</code> 分别查看node和npm的版本号</p>
-<p><img src="/images_blog/node-install/node-install-9.png" alt="blog"></p>
-<h2 id="配置npm在安装全局模块时的路径和缓存cache路径"><a href="#配置npm在安装全局模块时的路径和缓存cache路径" class="headerlink" title="配置npm在安装全局模块时的路径和缓存cache路径"></a>配置npm在安装全局模块时的路径和缓存cache路径</h2><p>在使用npm安装hexo时会默认将其安装在c盘下，不便管理，同时占用c盘资源所以这里配置自定义的全局模块安装目录，在node.js安装目录下新建两个文件夹 node_global和node_cache，然后在cmd命令下执行如下两个命令</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix <span class="string">&quot;D:自己的路径\node_global&quot;</span></span><br><span class="line"></span><br><span class="line">npm config set cache <span class="string">&quot;D:自己的路径\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>执行成功。然后在环境变量 -&gt; 系统变量中新建一个变量名为 “NODE_PATH”， 值为“D:\Program Files\nodejs\node_modules”（替换为自己的路径）最后编辑用户变量里的Path，将相应npm的路径改为：D:\Program Files\nodejs\node_global</p>
-<p><strong>配置完成</strong></p>
-<h2 id="配置淘宝镜像"><a href="#配置淘宝镜像" class="headerlink" title="配置淘宝镜像"></a>配置淘宝镜像</h2><p>因为npm的网站在国外，国内使用npm下载一些插件时会因为网络问题而失败，所以更换淘宝镜像，输入以下命令</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">更换淘宝镜像</span><br><span class="line">npm config set registry https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line">查看下载资源镜像</span><br><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line">还原仓库地址</span><br><span class="line">npm config set registry https:<span class="comment">//registry.npmjs.org/</span></span><br></pre></td></tr></table></figure>
-
-<p>查看npm配置集合<code>npm config list</code></p>
-<p><img src="/images_blog/node-install/node-install-10.png" alt="blog"></p>
-<p>注意红框文件,上述修改的三个配置都在文件中，我们也可以在文件中直接修改</p>
-<h2 id="修改路径"><a href="#修改路径" class="headerlink" title="修改路径"></a>修改路径</h2><p>输入命令更新或下载npm<code>npm install npm -g</code> -g 这个参数的意思就是安装到global目录下，也就是上面配置的目录</p>
-<p>再次查看global下有哪些模块<code>npm list -global</code></p>
-<p><img src="/images_blog/node-install/node-install-11.png" alt="blog"></p>
-<p>现在不为空了</p>
-<p><strong>注意：</strong>此时，默认的模块D:\安装包\日常软件\nodejs\node_modules 目录，将会改变为将会改变为D:\安装包\日常软件\nodejs\node_global\node_modules 目录，如果直接运行npm install等命令会报错的。我们需要在电脑属性 –》 高级系统设置 –》 环境变量中修改环境变量NODE_PATH 内容是：D:\安装包\日常软件\nodejs\node_global\node_modules<code>NODE_PATH变量已在上文中添加</code></p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>全局安装<code>npm install -g hexo-cli</code></p>
-<p>输入命令查看hexo是否安装成功<code>hexo -v</code></p>
-<p><img src="/images_blog/node-install/node-install-12.png" alt="blog"></p>
-<p>出现以上信息为安装成功，红框中为版本</p>
-<p><em>如对博文有什么建议，或者问题请进入关于页面联系博主</em></p>
-
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-03-03T10:10:51+08:00"
+              content="2021-03-03">
+          03-03
+        </time>
+      </div>
 
-    <footer class="post-footer">
-          
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/03/03/for%E5%BE%AA%E7%8E%AF/" itemprop="url">
+            <span itemprop="name">for循环</span>
+          </a>
+      </div>
 
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>陈坤
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://chenk.me/2020/10/23/node-js%E5%AE%89%E8%A3%85/" title="node.js安装">http://chenk.me/2020/10/23/node-js安装/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/%E5%AE%89%E8%A3%85/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/10/22/git%E5%AE%89%E8%A3%85/" rel="prev" title="git安装">
-                  <i class="fa fa-chevron-left"></i> git安装
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/10/23/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="使用hexo搭建个人博客">
-                  使用hexo搭建个人博客 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
+    </div>
+  </div>
+  
+  
+  
 
+  
 
 
 
